@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:yulduzlar_cosinius/src/repository/bloc/bottom_navbar_bloc.dart';
 import 'package:yulduzlar_cosinius/src/ui/pages/navbar_pages/main_nav_page.dart';
 
 void main() {
@@ -12,10 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return  const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:  BlocProvider(create: (BuildContext context)=>Bottomnavbar(),
-      child: const MainNavPage()),
+      home:  MainNavPage(),
     );
   }
 }
