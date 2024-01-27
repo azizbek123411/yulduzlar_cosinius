@@ -64,7 +64,7 @@ class _MainNavPageState extends State<MainNavPage> {
       height: 64.h,
       width: 312.w,
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.blueAccent),
+        border: Border.all(color: AppColors.color2d256b,width: 2),
         borderRadius: BorderRadius.circular(20.w),
         gradient: const LinearGradient(colors: [
           Color(0xff624fbb),
