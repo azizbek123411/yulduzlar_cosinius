@@ -36,4 +36,9 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
     fontStyle: FontStyle.normal,
   );
+  TextStyle w300 = const TextStyle(
+    fontFamily: 'SFPro',
+    fontWeight: FontWeight.w300,
+    fontStyle: FontStyle.normal,
+  );
 }

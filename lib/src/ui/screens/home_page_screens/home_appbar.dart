@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yulduzlar_cosinius/src/config/appcolors.dart';
 import 'package:yulduzlar_cosinius/src/config/font_size.dart';
+import 'package:yulduzlar_cosinius/src/config/router.dart';
 import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/appbar_screens/search_screen.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/home_page_widgets/buttons.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -30,7 +32,9 @@ class HomeAppBar extends StatelessWidget {
         ),
       ),
     actions: [
-      ButtonWidget(onTap: (){}, path: 'assets/svg/search-normal.svg'),
+      ButtonWidget(onTap: (){
+        AppRouter.go(context, const SearchScreen());
+      }, path: 'assets/svg/search-normal.svg'),
       ButtonWidget(onTap: (){}, path: 'assets/svg/notification-bing.svg'),
     ],
     );
