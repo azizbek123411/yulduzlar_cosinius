@@ -6,6 +6,7 @@ import 'package:yulduzlar_cosinius/src/config/router.dart';
 import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/appbar_screens/notification_screen.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/appbar_screens/search_screen.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/home_page_widgets/buttons.dart';
 
@@ -35,7 +36,9 @@ class HomeAppBar extends StatelessWidget {
       ButtonWidget(onTap: (){
         AppRouter.go(context, const SearchScreen());
       }, path: 'assets/svg/search-normal.svg'),
-      ButtonWidget(onTap: (){}, path: 'assets/svg/notification-bing.svg'),
+      ButtonWidget(onTap: (){
+        AppRouter.go(context, const NotificationScreen());
+      }, path: 'assets/svg/notification-bing.svg'),
     ],
     );
   }
