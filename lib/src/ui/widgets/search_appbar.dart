@@ -24,7 +24,7 @@ class SearchAppBar extends StatelessWidget {
             color: AppColors.colorC042D7,
             width: 1,
           ),
-          gradient: AppColors.mainBackground),
+          gradient: AppColors.mainBackgroundGradient,),
       child: Center(
         child: TextField(
           controller: controller,

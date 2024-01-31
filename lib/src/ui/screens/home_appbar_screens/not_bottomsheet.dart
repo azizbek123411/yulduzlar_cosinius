@@ -28,7 +28,7 @@ class OpenMessageWidget extends StatelessWidget {
           topLeft: Radius.circular(10),
           topRight: Radius.circular(10),
         ),
-        color: AppColors.color121433,
+        color: AppColors.mainBackground,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,

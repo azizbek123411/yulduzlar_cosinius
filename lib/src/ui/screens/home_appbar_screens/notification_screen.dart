@@ -19,7 +19,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.color121433,
+      backgroundColor: AppColors.mainBackground,
       appBar: PreferredSize(
         preferredSize: Size(353.w, 40.h),
         child: Container(

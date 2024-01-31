@@ -19,7 +19,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.color121433,
+      backgroundColor: AppColors.mainBackground,
       appBar: PreferredSize(
         preferredSize: Size(double.infinity, 100.h),
         child: SearchAppBar(),

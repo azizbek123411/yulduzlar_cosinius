@@ -22,7 +22,7 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.color121433,
+      backgroundColor: AppColors.mainBackground,
       appBar: PreferredSize(
         preferredSize: Size(double.infinity.w, 44.h),
         child: const HomeAppBar(),

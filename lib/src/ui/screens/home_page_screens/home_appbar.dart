@@ -6,9 +6,10 @@ import 'package:yulduzlar_cosinius/src/config/router.dart';
 import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
-import 'package:yulduzlar_cosinius/src/ui/screens/appbar_screens/notification_screen.dart';
-import 'package:yulduzlar_cosinius/src/ui/screens/appbar_screens/search_screen.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/buttons.dart';
+
+import '../home_appbar_screens/notification_screen.dart';
+import '../home_appbar_screens/search_screen.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});

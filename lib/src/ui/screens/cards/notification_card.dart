@@ -5,7 +5,7 @@ import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 
-import '../appbar_screens/not_bottomsheet.dart';
+import '../home_appbar_screens/not_bottomsheet.dart';
 
 class NotCard extends StatelessWidget {
   const NotCard({super.key});
@@ -15,7 +15,7 @@ class NotCard extends StatelessWidget {
     return GestureDetector(
       onTap: (){
         showModalBottomSheet(
-            backgroundColor: AppColors.color121433,
+            backgroundColor: AppColors.mainBackground,
             context: context,
             builder: (context) {
               return const OpenMessageWidget();
@@ -28,7 +28,7 @@ class NotCard extends StatelessWidget {
         width: 400.w,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8),
-            gradient: AppColors.mainBackground,
+            gradient: AppColors.mainBackgroundGradient,
             border: Border.all(color: AppColors.color2d256b)),
         child: Row(
           children: [

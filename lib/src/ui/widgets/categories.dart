@@ -17,7 +17,7 @@ class Categories extends StatelessWidget {
       height: 36.h,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(50),
-        gradient: AppColors.mainBackground,
+        gradient: AppColors.mainBackgroundGradient,
         border: Border.all(
           color: AppColors.color2d256b,
           width: 2,
