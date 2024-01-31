@@ -6,7 +6,7 @@ import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/cards/notification_card.dart';
-import 'package:yulduzlar_cosinius/src/ui/widgets/home_page_widgets/buttons.dart';
+import 'package:yulduzlar_cosinius/src/ui/widgets/buttons.dart';
 
 class NotificationScreen extends StatefulWidget {
   const NotificationScreen({super.key});
@@ -38,7 +38,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       ),
       body: Padding(
         padding: Dis.only(lr: 20.w,tb: 20.h),
-        child: SingleChildScrollView(
+        child: const SingleChildScrollView(
           child: Column(
             children: [
               NotCard(),

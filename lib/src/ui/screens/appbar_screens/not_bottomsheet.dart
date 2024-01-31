@@ -1,11 +1,10 @@
 // ignore_for_file: unused_result
 
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:yulduzlar_cosinius/src/config/appcolors.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
+import 'package:yulduzlar_cosinius/src/ui/widgets/main_button.dart';
 
 import '../../../config/font_size.dart';
 import '../../../config/router.dart';
@@ -14,12 +13,14 @@ import '../../../repository/utils/app_padding.dart';
 import '../../../repository/utils/space.dart';
 
 class OpenMessageWidget extends StatelessWidget {
-
-  const OpenMessageWidget({Key? key, }) : super(key: key);
+  const OpenMessageWidget({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  Widget build(BuildContext context, ) {
-
+  Widget build(
+    BuildContext context,
+  ) {
     return Container(
       padding: Dis.only(lr: 24.w, tb: 24.h),
       decoration: BoxDecoration(
@@ -37,17 +38,15 @@ class OpenMessageWidget extends StatelessWidget {
           Text(
             "Super Stars qanday loyiha",
             style: AppTextStyle.instance.w700.copyWith(
-              fontSize: FontSizeConst.instance.mediumFont,
-              color:CupertinoColors.white
-            ),
+                fontSize: FontSizeConst.instance.mediumFont,
+                color: CupertinoColors.white),
           ),
           HBox(4.h),
           Text(
             "16.12.2024 | 13:21",
             style: AppTextStyle.instance.w400.copyWith(
-              fontSize: FontSizeConst.instance.smallFont,
-              color: Colors.grey.shade400
-            ),
+                fontSize: FontSizeConst.instance.smallFont,
+                color: Colors.grey.shade400),
           ),
           HBox(8.h),
           Text(
@@ -58,24 +57,15 @@ class OpenMessageWidget extends StatelessWidget {
             ),
           ),
           HBox(49.h),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              minimumSize: Size(345.w, 48.h),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(50)),
-              backgroundColor: AppColors.colorC042D7,
-            ),
-            onPressed: () {
+          MainButton(
+            height: 48.h,
+            width: double.infinity,
+            title: "Davom etish",
+            onTap: () {
               AppRouter.close(context);
             },
-            child: Text(
-              "Davom etish",
-              style:AppTextStyle.instance.w600.copyWith(
-                fontSize: FontSizeConst.instance.mediumFont,
-                color: CupertinoColors.white
-              ),
-            ),
-          ),
+            radius: 50,
+          )
         ],
       ),
     );

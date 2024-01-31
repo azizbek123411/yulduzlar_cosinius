@@ -6,7 +6,7 @@ import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 
-import '../../widgets/home_page_widgets/search_appbar.dart';
+import '../../widgets/search_appbar.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

@@ -12,14 +12,13 @@ class AppColors {
       colors: [
         Color(0xff121433),
         Color(0xff180D41),
-        Color(0xff350D53  ),
+        Color(0xff350D53),
       ]);
-  static LinearGradient gr295agr171437 = const LinearGradient(
-      end: Alignment.centerLeft,
-      begin: Alignment.centerRight,
+  static LinearGradient mainButtonGradient = const LinearGradient(
+      begin: Alignment.bottomCenter,
+      end: Alignment.topCenter,
       colors: [
-        Color(0xff171437),
-        Color(0xff29255a),
-
-      ]);
+    Color(0xff8b21c2),
+    Color(0xff6f3fcd),
+  ]);
 }

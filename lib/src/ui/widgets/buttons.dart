@@ -8,7 +8,11 @@ class ButtonWidget extends StatelessWidget {
   void Function() onTap;
   String path;
 
-  ButtonWidget({required this.onTap, required this.path, super.key,});
+  ButtonWidget({
+    required this.onTap,
+    required this.path,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +25,17 @@ class ButtonWidget extends StatelessWidget {
         width: 44.w,
         decoration: BoxDecoration(
           gradient: AppColors.mainBackground,
-          border: Border.all(color: AppColors.color2d256b,width: 2),
+          border: Border.all(
+            color: AppColors.color2d256b,
+            width: 2,
+          ),
           borderRadius: BorderRadius.circular(60),
         ),
-        child: SvgPicture.asset(path,height: 22.h,width: 22.w,),
+        child: SvgPicture.asset(
+          path,
+          height: 22.h,
+          width: 22.w,
+        ),
       ),
     );
   }

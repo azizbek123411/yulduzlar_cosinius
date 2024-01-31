@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 
-import '../../../config/appcolors.dart';
-import '../../../config/font_size.dart';
-import '../../../repository/constants/text_style.dart';
-import '../../../repository/utils/app_padding.dart';
+import '../../config/appcolors.dart';
+import '../../config/font_size.dart';
+import '../../repository/constants/text_style.dart';
+import '../../repository/utils/app_padding.dart';
+
 class SearchAppBar extends StatelessWidget {
-   SearchAppBar({super.key});
-  final controller=TextEditingController();
+  SearchAppBar({super.key});
+
+  final controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,14 +20,18 @@ class SearchAppBar extends StatelessWidget {
       height: 45.h,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
-          border: Border.all(color: AppColors.colorC042D7, width: 2),
-          gradient: AppColors.gr295agr171437),
+          border: Border.all(
+            color: AppColors.colorC042D7,
+            width: 1,
+          ),
+          gradient: AppColors.mainBackground),
       child: Center(
         child: TextField(
           controller: controller,
           style: AppTextStyle.instance.w600.copyWith(
-              fontSize: FontSizeConst.instance.mediumFont,
-              color: Colors.white),
+            fontSize: FontSizeConst.instance.mediumFont,
+            color: Colors.white,
+          ),
           cursorColor: Colors.white,
           decoration: InputDecoration(
             suffixIcon: IconButton(

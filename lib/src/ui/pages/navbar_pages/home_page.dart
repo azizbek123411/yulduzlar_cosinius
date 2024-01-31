@@ -5,7 +5,7 @@ import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/cards/artist_card.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/home_page_screens/home_banner.dart';
-import 'package:yulduzlar_cosinius/src/ui/widgets/home_page_widgets/categories.dart';
+import 'package:yulduzlar_cosinius/src/ui/widgets/categories.dart';
 
 import '../../../config/appcolors.dart';
 import '../../../repository/utils/app_padding.dart';

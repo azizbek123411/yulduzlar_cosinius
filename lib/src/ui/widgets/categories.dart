@@ -4,7 +4,7 @@ import 'package:yulduzlar_cosinius/src/config/font_size.dart';
 import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 
-import '../../../repository/utils/app_padding.dart';
+import '../../repository/utils/app_padding.dart';
 
 class Categories extends StatelessWidget {
   const Categories({super.key});

@@ -51,17 +51,15 @@ class NotCard extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
-                Flexible(
-                  child: Text(
-                    'Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha',
-                    style: AppTextStyle.instance.w400.copyWith(
-                      fontSize: FontSizeConst.instance.smallFont,
-                      color: Colors.grey,
-                      letterSpacing: -0.22,
-                    ),
-                    maxLines: 4,
-                    overflow: TextOverflow.fade,
+                Text(
+                  'Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha',
+                  style: AppTextStyle.instance.w400.copyWith(
+                    fontSize: FontSizeConst.instance.smallFont,
+                    color: Colors.grey,
+                    letterSpacing: -0.22,
                   ),
+                  maxLines: 4,
+                  overflow: TextOverflow.fade,
                 ),
 
               ],
