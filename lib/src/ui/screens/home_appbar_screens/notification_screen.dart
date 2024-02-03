@@ -21,7 +21,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return Scaffold(
       backgroundColor: AppColors.mainBackground,
       appBar: PreferredSize(
-        preferredSize: Size(353.w, 40.h),
+        preferredSize: Size(353.w, 44.h),
         child: Container(
           padding: Dis.lr(20.w),
           child: AppBar(
@@ -32,7 +32,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
             backgroundColor: Colors.transparent,
             leading: ButtonWidget(onTap: () {
               AppRouter.close(context);
-            }, path: 'assets/svg/Frame.svg',),
+            }, path: 'assets/svg/Frame.svg', h: 40.h, w: 40.w, radius: 50,),
           ),
         ),
       ),

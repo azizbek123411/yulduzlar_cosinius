@@ -36,10 +36,10 @@ class HomeAppBar extends StatelessWidget {
     actions: [
       ButtonWidget(onTap: (){
         AppRouter.go(context, const SearchScreen());
-      }, path: 'assets/svg/search-normal.svg'),
+      }, path: 'assets/svg/search-normal.svg', h: 40.h, w: 40.w, radius: 50,),
       ButtonWidget(onTap: (){
         AppRouter.go(context, const NotificationScreen());
-      }, path: 'assets/svg/notification-bing.svg'),
+      }, path: 'assets/svg/notification-bing.svg', h: 40.h, w: 40.h, radius: 50,),
     ],
     );
   }

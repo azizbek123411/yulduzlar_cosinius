@@ -7,6 +7,7 @@ import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/artist_screens/artist_info_bottombat.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/cards/comment_card.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/buttons.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/categories.dart';
@@ -26,17 +27,19 @@ class _ArtistInfoState extends State<ArtistInfo> {
     return Scaffold(
       backgroundColor: AppColors.mainBackground,
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity, 44.h),
-        child: Padding(
-          padding: Dis.only(left: 15.w),
-          child: AppBar(
-            backgroundColor: Colors.transparent,
-            leading: ButtonWidget(
-              onTap: () {
-                AppRouter.close(context);
-              },
-              path: 'assets/svg/Frame.svg',
-            ),
+        preferredSize: Size(double.infinity, 40.h),
+        child: AppBar(
+          backgroundColor: Colors.transparent,
+          leading: Row(
+            children: [
+              WBox(3.w),
+              ButtonWidget(
+                onTap: () {
+                  AppRouter.close(context);
+                },
+                path: 'assets/svg/Frame.svg', h: 42.h, w: 40.w, radius: 50,
+              ),
+            ],
           ),
         ),
       ),
@@ -241,6 +244,7 @@ class _ArtistInfoState extends State<ArtistInfo> {
           ),
         ),
       ),
+      bottomNavigationBar: ArtistInfoNavar(),
     );
   }
 }

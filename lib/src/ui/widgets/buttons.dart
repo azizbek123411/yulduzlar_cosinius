@@ -7,10 +7,16 @@ import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 class ButtonWidget extends StatelessWidget {
   void Function() onTap;
   String path;
+  double h;
+  double w;
+  double radius;
 
   ButtonWidget({
     required this.onTap,
     required this.path,
+    required this.h,
+    required this.w,
+    required this.radius,
     super.key,
   });
 
@@ -21,20 +27,20 @@ class ButtonWidget extends StatelessWidget {
       child: Container(
         margin: Dis.lr(5.w),
         padding: Dis.all(10),
-        height: 46.h,
-        width: 44.w,
+        height: h,
+        width: w,
         decoration: BoxDecoration(
           gradient: AppColors.mainBackgroundGradient,
           border: Border.all(
             color: AppColors.color2d256b,
             width: 2,
           ),
-          borderRadius: BorderRadius.circular(60),
+          borderRadius: BorderRadius.circular(radius),
         ),
         child: SvgPicture.asset(
           path,
-          height: 22.h,
-          width: 22.w,
+          height: 24.h,
+          width: 24.w,
         ),
       ),
     );
