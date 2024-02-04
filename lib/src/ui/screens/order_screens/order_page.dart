@@ -4,6 +4,8 @@ import 'package:yulduzlar_cosinius/src/config/router.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/artist_screens/select_ordering.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/order_screens/order_for_others.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/order_screens/order_formyself.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/buttons.dart';
 
 import '../../../config/font_size.dart';
@@ -48,11 +50,15 @@ class _OrderPageState extends State<OrderPage> {
              const  ArtistRow(),
               SelectOrder(
                   title: "O'zim uchun",
-                  onTap: () {},
+                  onTap: () {
+                    AppRouter.go(context, const ForMyself());
+                  },
                   path: 'assets/images/formyself.png'),
               SelectOrder(
                   title: "Do'stlar uchun",
-                  onTap: () {},
+                  onTap: () {
+                    AppRouter.go(context, const OrderForOthers());
+                  },
                   path: 'assets/images/forothers.png'),
               HBox(10.h),
               Text(
