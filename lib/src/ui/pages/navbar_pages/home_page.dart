@@ -24,7 +24,7 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       backgroundColor: AppColors.mainBackground,
       appBar: PreferredSize(
-        preferredSize: Size(double.infinity.w, 44.h),
+        preferredSize: Size(double.infinity.w, 40.h),
         child: const HomeAppBar(),
       ),
       body: Padding(

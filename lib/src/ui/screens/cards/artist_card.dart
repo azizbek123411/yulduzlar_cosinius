@@ -59,10 +59,8 @@ class ArtistCard extends StatelessWidget {
                   ],
                 ),
                 Row(
-                  // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Text(
-
                       "Honanda",
                       style: AppTextStyle.instance.w500.copyWith(
                           fontSize: FontSizeConst.instance.smallFont,

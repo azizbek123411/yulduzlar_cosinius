@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/order_screens/order_page.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/buttons.dart';
 
+import '../../../config/router.dart';
 import '../../widgets/main_button.dart';
 
 class ArtistInfoNavar extends StatelessWidget {
@@ -28,7 +30,9 @@ class ArtistInfoNavar extends StatelessWidget {
                 height: 48.h,
                 width: 260.w,
                 title: "40\$ga bron qilish",
-                onTap: () {},
+                onTap: () {
+                  AppRouter.go(context, const OrderPage());
+                },
                 radius: 50),
           ],
         ),

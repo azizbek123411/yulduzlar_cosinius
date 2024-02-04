@@ -10,8 +10,9 @@ class AppColors {
       end: Alignment.centerLeft,
       begin: Alignment.centerRight,
       colors: [
-        Color(0xff121433),
-        Color(0xff180D41),
+        Color(0xff161336),
+        Color(0xff2a255b),
+
         // Color(0xff350D53),
       ]);
   static LinearGradient mainButtonGradient = const LinearGradient(
