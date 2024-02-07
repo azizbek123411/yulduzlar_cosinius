@@ -6,9 +6,11 @@ import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/artist_screens/artist_row.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/order_screens/add_card.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/buttons.dart';
 
 import '../../../config/font_size.dart';
+import '../../widgets/main_button.dart';
 
 enum Status { standart, quick }
 
@@ -110,6 +112,38 @@ class _FinishingTimeState extends State<FinishingTime> {
               ),
             ],
           ),
+        ),
+      ),
+      bottomNavigationBar: SizedBox(
+        height: 110.h,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                'Pulni qaytarish qanday ishlaydi?',
+                style: AppTextStyle.instance.w600.copyWith(
+                  fontSize: FontSizeConst.instance.smallFont,
+                  color: AppColors.colorFFF,
+                ),
+              ),
+            ),
+            Padding(
+              padding: Dis.only(lr: 20.w, bottom: 10.h),
+              child: MainButton(
+                  height: 48.h,
+                  width: double.infinity,
+                  title: "Keyingisi",
+                  onTap: () {
+                    AppRouter.go(
+                      context,
+                      const AddCardScreen(),
+                    );
+                  },
+                  radius: 50),
+            ),
+          ],
         ),
       ),
     );

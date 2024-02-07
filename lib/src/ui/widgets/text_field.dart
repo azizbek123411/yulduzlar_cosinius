@@ -61,14 +61,14 @@ class TextFields extends StatelessWidget {
             ),
             readOnly: readOnly,
             decoration: InputDecoration(
-              prefix: prefix,
+              prefixIcon: prefix,
               suffix: suffixIcon,
               // contentPadding: Dis.all(20),
               border: InputBorder.none,
               hintText: hintText,
               hintStyle: AppTextStyle.instance.w500.copyWith(
                 fontSize: FontSizeConst.instance.smallFont,
-                color: AppColors.colorFFF,
+                color: AppColors.colorFFF60,
               ),
             ),
           ),
