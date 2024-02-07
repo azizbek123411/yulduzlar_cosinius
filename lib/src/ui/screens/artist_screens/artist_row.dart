@@ -17,6 +17,7 @@ class ArtistRow extends StatelessWidget {
             "assets/images/abror_dostov.jpg",
             height: 64.h,
             width: 64.w,
+            fit: BoxFit.cover,
           ),
         ),
         WBox(10.w),

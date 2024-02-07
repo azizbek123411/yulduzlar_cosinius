@@ -15,7 +15,7 @@ class ArtistInfoNavar extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding: Dis.only(bottom: 14.h),
+        padding: Dis.only(tb: 8.h),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [

@@ -17,7 +17,7 @@ class TextFields extends StatelessWidget {
   Widget prefix;
   int maxLine;
 
-  TextFields({
+   TextFields({
     super.key,
     required this.title,
     required this.hintText,
@@ -61,7 +61,7 @@ class TextFields extends StatelessWidget {
             ),
             readOnly: readOnly,
             decoration: InputDecoration(
-              prefixIcon: prefix,
+              prefix: prefix,
               suffix: suffixIcon,
               // contentPadding: Dis.all(20),
               border: InputBorder.none,

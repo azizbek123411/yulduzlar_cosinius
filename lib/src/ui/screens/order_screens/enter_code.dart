@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:yulduzlar_cosinius/src/config/appcolors.dart';
 import 'package:yulduzlar_cosinius/src/config/font_size.dart';
+import 'package:yulduzlar_cosinius/src/config/router.dart';
 import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
@@ -25,7 +26,9 @@ class EnterCode extends StatelessWidget {
           children: [
             WBox(2.w),
             ButtonWidget(
-                onTap: () {},
+                onTap: () {
+                  AppRouter.close(context);
+                },
                 path: "assets/svg/Frame.svg",
                 h: 40.h,
                 w: 40.w,

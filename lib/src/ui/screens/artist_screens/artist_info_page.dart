@@ -214,7 +214,7 @@ class _ArtistInfoState extends State<ArtistInfo> {
           ),
         ),
       ),
-      bottomNavigationBar: ArtistInfoNavar(),
+      bottomNavigationBar: const ArtistInfoNavar(),
     );
   }
 }

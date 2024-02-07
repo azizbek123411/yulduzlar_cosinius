@@ -57,7 +57,7 @@ class _OrderPageState extends State<OrderPage> {
               SelectOrder(
                   title: "Do'stlar uchun",
                   onTap: () {
-                    AppRouter.go(context, const OrderForOthers());
+                    AppRouter.go(context, const ForOthers());
                   },
                   path: 'assets/images/forothers.png'),
               HBox(10.h),
