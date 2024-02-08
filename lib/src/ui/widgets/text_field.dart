@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:yulduzlar_cosinius/src/config/appcolors.dart';
 import 'package:yulduzlar_cosinius/src/config/font_size.dart';
 import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
@@ -63,7 +64,6 @@ class TextFields extends StatelessWidget {
             decoration: InputDecoration(
               prefix: prefix,
               suffix: suffixIcon,
-              // contentPadding: Dis.all(20),
               border: InputBorder.none,
               hintText: hintText,
               hintStyle: AppTextStyle.instance.w500.copyWith(

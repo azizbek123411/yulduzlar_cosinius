@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:yulduzlar_cosinius/src/config/font_size.dart';
-import 'package:yulduzlar_cosinius/src/config/router.dart';
 import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
-import 'package:yulduzlar_cosinius/src/ui/screens/artist_screens/artist_info_page.dart';
 
 import '../../../config/appcolors.dart';
 
 class ArtistCard extends StatelessWidget {
-  const ArtistCard({super.key});
+  void Function() onTap;
+   ArtistCard({super.key,
+   required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-        AppRouter.go(context, const ArtistInfo());
-      },
+      onTap: onTap,
       child: Container(
         margin: Dis.only(bottom: 10, top: 10),
         padding: Dis.all(10),
