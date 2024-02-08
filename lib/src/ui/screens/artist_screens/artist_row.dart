@@ -15,8 +15,8 @@ class ArtistRow extends StatelessWidget {
           borderRadius: BorderRadius.circular(50),
           child: Image.asset(
             "assets/images/abror_dostov.jpg",
-            height: 64.h,
-            width: 64.w,
+            height: 56.h,
+            width: 56.w,
             fit: BoxFit.cover,
           ),
         ),
