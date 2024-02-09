@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/ui/pages/navbar_pages/my_orders.dart';
-import 'package:yulduzlar_cosinius/src/ui/pages/navbar_pages/profile_page.dart';
+import 'package:yulduzlar_cosinius/src/ui/pages/navbar_pages/settings.dart';
 import 'package:yulduzlar_cosinius/src/ui/pages/navbar_pages/video_play_page.dart';
 import '../../../config/appcolors.dart';
 import '../../../repository/utils/app_padding.dart';
@@ -36,7 +36,7 @@ class _MainNavPageState extends State<MainNavPage> {
     const Homepage(),
     const VideoPlay(),
     const MyOrders(),
-    const ProfilePage(),
+    const SettingsPage(),
   ];
 
 
