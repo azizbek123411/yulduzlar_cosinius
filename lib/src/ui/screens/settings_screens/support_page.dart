@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 import "package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart";
+import "package:yulduzlar_cosinius/src/ui/screens/settings_screens/connect_screen.dart";
+import "package:yulduzlar_cosinius/src/ui/screens/settings_screens/faq_screen.dart";
 
 import "../../../config/appcolors.dart";
 import "../../../config/font_size.dart";
@@ -22,60 +24,62 @@ class _SupportPageState extends State<SupportPage> {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+
         appBar: AppBar(
-            leading: Row(
-              children: [
-                WBox(2.w),
-                ButtonWidget(onTap: () {
+          leading: Row(
+            children: [
+              WBox(2.w),
+              ButtonWidget(
+                onTap: () {
                   AppRouter.close(context);
                 },
-                  path: "assets/svg/Frame.svg",
-                  h: 40.h,
-                  w: 40.w,
-                  radius: 50,)
+                path: "assets/svg/Frame.svg",
+                h: 40.h,
+                w: 40.w,
+                radius: 50,
+              )
+            ],
+          ),
+          title: Text(
+            "Yordam markazi",
+            style: AppTextStyle.instance.w700.copyWith(
+                color: AppColors.colorFFF,
+                fontSize: FontSizeConst.instance.largeFont),
+          ),
+          backgroundColor: Colors.transparent,
+          bottom: PreferredSize(
+            preferredSize: Size(double.infinity, 60.h),
+            child: TabBar(
+              indicatorPadding: Dis.only(lr: 8.w),
+              indicatorSize: TabBarIndicatorSize.tab,
+              dividerHeight: 0,
+              indicator: BoxDecoration(
+                  gradient: AppColors.mainButtonGradient,
+                  borderRadius: BorderRadius.circular(50),
+                  border: Border.all(color: AppColors.colorC042D7)),
+              indicatorColor: AppColors.colorC042D7,
+              unselectedLabelColor: AppColors.colorFFF60,
+              labelStyle: AppTextStyle.instance.w600.copyWith(
+                color: AppColors.colorFFF,
+                fontSize: FontSizeConst.instance.mediumFont,
+              ),
+              tabs: const [
+                Tab(
+                  text: "FAQ",
+                ),
+                Tab(
+                  text: "Bog'lanish",
+                )
               ],
             ),
-
-            title: Text("Yordam markazi",
-            style: AppTextStyle.instance.w700.copyWith(
-        color: AppColors.colorFFF,
-        fontSize: FontSizeConst.instance.largeFont
-        ),),
-      backgroundColor: Colors.transparent,
-      bottom: PreferredSize(
-        preferredSize: Size(double.infinity, 60.h),
-        child: TabBar(
-          indicatorPadding: Dis.only(lr: 8.w),
-          indicatorSize: TabBarIndicatorSize.tab,
-          dividerHeight: 0,
-          indicator: BoxDecoration(
-              gradient: AppColors.mainButtonGradient,
-              borderRadius: BorderRadius.circular(50),
-              border: Border.all(color: AppColors.colorC042D7)
           ),
-          indicatorColor: AppColors.colorC042D7,
-          unselectedLabelColor: AppColors.colorFFF60,
-          labelStyle: AppTextStyle.instance.w600.copyWith(
-            color: AppColors.colorFFF,
-            fontSize: FontSizeConst.instance.mediumFont,
-          ),
-          tabs: const [
-            Tab(
-              text: "FAQ",
-            ),
-            Tab(
-              text: "Bog'lanish",
-            )
-          ],
-
+        ),
+        backgroundColor: AppColors.mainBackground,
+        body: TabBarView(
+          children: [
+            FAQScreen(), ConnectScreen()],
         ),
       ),
-    ),
-    backgroundColor: AppColors.mainBackground,
-        body: TabBarView(
-          children: [],
-        ),
-    ),
     );
   }
 }
