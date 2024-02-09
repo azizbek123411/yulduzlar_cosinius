@@ -6,6 +6,8 @@ import 'package:yulduzlar_cosinius/src/repository/constants/text_style.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/settings_screens/proifile_screen.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/settings_screens/security_page.dart';
+import 'package:yulduzlar_cosinius/src/ui/screens/settings_screens/support_page.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/buttons.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/language_bottom_sheet.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/list_tile.dart';
@@ -120,7 +122,9 @@ class _SettingsPageState extends State<SettingsPage> {
               ListTilee(
                 title: "Xavfsizlik",
                 actionIcon: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    AppRouter.go(context, const SecurityPage(),);
+                  },
                   icon: Icon(Icons.keyboard_arrow_right_sharp,
                       size: 24, color: AppColors.colorFFF),
                 ),
@@ -134,7 +138,9 @@ class _SettingsPageState extends State<SettingsPage> {
               ListTilee(
                 title: "Yordam markazi",
                 actionIcon: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    AppRouter.go(context, const SupportPage(),);
+                  },
                   icon: Icon(
                     Icons.keyboard_arrow_right_sharp,
                     size: 24,
