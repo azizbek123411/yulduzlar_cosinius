@@ -13,6 +13,7 @@ import 'package:yulduzlar_cosinius/src/ui/widgets/language_bottom_sheet.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/list_tile.dart';
 
 import '../../../repository/utils/app_padding.dart';
+import '../../widgets/logout_bottom.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -89,11 +90,9 @@ class _SettingsPageState extends State<SettingsPage> {
                 actionIcon: IconButton(
                   onPressed: () {
                     showModalBottomSheet(
-                        context: context, builder: (BuildContext context){
-                      return LanguageBottomSheet();
-
+                        context: context, builder: (BuildContext context) {
+                      return const LanguageBottomSheet();
                     });
-
                   },
                   icon: Icon(Icons.keyboard_arrow_right_sharp,
                       size: 24, color: AppColors.colorFFF),
@@ -157,12 +156,18 @@ class _SettingsPageState extends State<SettingsPage> {
               ListTilee(
                 title: "Log Out",
                 actionIcon: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    showModalBottomSheet(context: context, builder: (BuildContext context){
+                      return const LogOutBottom();
+                    }
+                  );},
                   icon: Icon(Icons.keyboard_arrow_right_sharp,
                       size: 24, color: AppColors.colorFFF),
                 ),
                 leading: ButtonWidget(
-                    onTap: () {},
+                    onTap: () {
+
+                    },
                     path: "assets/svg/logout-2 1.svg",
                     h: 40.h,
                     w: 40.w,

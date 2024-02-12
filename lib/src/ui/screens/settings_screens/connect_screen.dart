@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../../config/appcolors.dart';
 class ConnectScreen extends StatefulWidget {
   const ConnectScreen({super.key});
 
@@ -9,6 +11,8 @@ class ConnectScreen extends StatefulWidget {
 class _ConnectScreenState extends State<ConnectScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: AppColors.mainBackground,
+    );
   }
 }
