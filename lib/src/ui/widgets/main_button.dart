@@ -36,8 +36,9 @@ class MainButton extends StatelessWidget {
           child: Text(
             title,
             style: AppTextStyle.instance.w600.copyWith(
-                fontSize: FontSizeConst.instance.mediumFont,
-                color: CupertinoColors.white),
+              fontSize: FontSizeConst.instance.mediumFont,
+              color: AppColors.colorFFF,
+            ),
           ),
         ),
       ),

@@ -20,6 +20,7 @@ class _MyOrdersState extends State<MyOrders> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          leadingWidth: 0,
           title: Text("Mening buyurtmalarim",
           style: AppTextStyle.instance.w700.copyWith(
             color: AppColors.colorFFF,

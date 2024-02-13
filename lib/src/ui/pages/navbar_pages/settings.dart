@@ -27,6 +27,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leadingWidth: 0,
         backgroundColor: Colors.transparent,
         title: Text(
           "Sozlamalar",

@@ -31,6 +31,7 @@ class NotCard extends StatelessWidget {
             gradient: AppColors.mainBackgroundGradient,
             border: Border.all(color: AppColors.color2d256b)),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
@@ -43,6 +44,7 @@ class NotCard extends StatelessWidget {
               ),
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   'Super Stars qanday loyiha',
@@ -52,7 +54,7 @@ class NotCard extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha Super Stars qanday loyiha',
+                  'Super Stars qanday loyiha Super qanday loyiha',
                   style: AppTextStyle.instance.w400.copyWith(
                     fontSize: FontSizeConst.instance.smallFont,
                     color: Colors.grey,

@@ -31,7 +31,7 @@ class ShowDialog extends StatelessWidget {
          padding: Dis.all(20),
          height: h,
          width: w,
-         decoration: BoxDecoration(color: AppColors.mainBackground.withOpacity(0.4),
+         decoration: BoxDecoration(color: AppColors.mainBackground.withOpacity(0.5),
            borderRadius: BorderRadius.circular(radius),
            border: Border.all(color: AppColors.color2d256b),
          ),
