@@ -63,7 +63,7 @@ class _UserOrArtistState extends State<UserOrArtist> {
           ),
         ),
         backgroundColor: AppColors.mainBackground,
-        body: TabBarView(
+        body: const TabBarView(
 
           children: [
             CreateUser(),

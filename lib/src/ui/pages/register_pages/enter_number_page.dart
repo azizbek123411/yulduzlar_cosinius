@@ -46,9 +46,9 @@ class _EnterNumberPageState extends State<EnterNumberPage> {
       backgroundColor: AppColors.mainBackground,
       body: SingleChildScrollView(
         child: Padding(
-          padding: Dis.all(16),
+          padding: Dis.only(lr:16.w),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               HBox(150.h),
@@ -75,7 +75,6 @@ class _EnterNumberPageState extends State<EnterNumberPage> {
                 ),
               ),
               HBox(30.h),
-        
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -94,12 +93,11 @@ class _EnterNumberPageState extends State<EnterNumberPage> {
                       gradient: AppColors.mainBackgroundGradient,
                       borderRadius: BorderRadius.circular(40),
                       border: Border.all(
-                        color: AppColors.color2d256b,
+                        color: showButton?AppColors.colorC042D7:AppColors.color2d256b,
                         width: 1,
                       ),
                     ),
                     child: TextField(
-        
                       controller: controller,
                       maxLength: 9,
                       keyboardType: TextInputType.number,
@@ -109,7 +107,7 @@ class _EnterNumberPageState extends State<EnterNumberPage> {
                         color: AppColors.colorFFF,
                       ),
                       decoration: InputDecoration(
-                        contentPadding: Dis.only(top: 28.h),
+                        contentPadding: Dis.only(top: 30.h),
                         prefixIcon: Padding(
                           padding: Dis.only(left: 8.w, top: 21.h),
                           child: Text(
@@ -127,48 +125,44 @@ class _EnterNumberPageState extends State<EnterNumberPage> {
                   ),
                 ],
               ),
+              Container(
+                margin: Dis.only(top: 303.h),
+                height: 50.h,
+                // width: double.infinity,
+                child: showButton
+                    ? MainButton(
+                    height: 48.h,
+                    width: double.infinity,
+                    title: "Davom etish",
+                    onTap: () {
+                      AppRouter.go(context, const SMSConfirm());
+                    },
+                    radius: 50)
+                    : Container(
+                  height: 48.h,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(50),
+                    gradient: AppColors.mainBackgroundGradient,
+                    border:
+                    Border.all(color: showButton?AppColors.colorC042D7:AppColors.color2d256b, width: 1),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "Davom etish",
+                      style: AppTextStyle.instance.w600.copyWith(
+                          fontSize: FontSizeConst.instance.mediumFont,
+                          color: AppColors.colorFFF),
+                    ),
+                  ),
+                ),
+              )
 
             ],
           ),
         ),
       ),
-      floatingActionButton:   Padding(
-        padding: Dis.only(lr: 16.w,bottom: 15.h),
-        child: Container(
-          margin: Dis.only(top: 260.h),
-          // alignment:Alignment.bottomCenter,
-          height: 50.h,
-          width: double.infinity,
-          child: showButton
-              ? MainButton(
-              height: 48.h,
-              width: double.infinity,
-              title: "Davom etish",
-              onTap: () {
-               AppRouter.go(context, const SMSConfirm());
-              },
-              radius: 50)
-              : Container(
-            height: 48.h,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              gradient: AppColors.mainBackgroundGradient,
-              border:
-              Border.all(color: showButton?AppColors.colorC042D7:AppColors.color2d256b, width: 1),
-            ),
-            child: Center(
-              child: Text(
-                "Davom etish",
-                style: AppTextStyle.instance.w600.copyWith(
-                    fontSize: FontSizeConst.instance.mediumFont,
-                    color: AppColors.colorFFF),
-              ),
-            ),
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
     );
   }
 }

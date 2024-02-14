@@ -70,7 +70,7 @@ class _CreateArtistState extends State<CreateArtist> {
                   h: 48.h,
                   w: double.infinity,
                   radius: 40,
-                  prefix: WBox(8),
+                  prefix: WBox(10.w),
                   maxLine: 1),
               TextFields(
                   title: "Familiya",
@@ -80,7 +80,7 @@ class _CreateArtistState extends State<CreateArtist> {
                   h: 48.h,
                   w: double.infinity,
                   radius: 40,
-                  prefix: WBox(8),
+                  prefix: WBox(10.w),
                   maxLine: 1),
               TextFields(
                   title: "Familiya",
@@ -90,7 +90,7 @@ class _CreateArtistState extends State<CreateArtist> {
                   h: 220.h,
                   w: double.infinity,
                   radius: 10,
-                  prefix: WBox(8),
+                  prefix: WBox(10.w),
                   maxLine: 20),
               TextFields(
                     title: "Tegishli tofialar",
@@ -100,7 +100,7 @@ class _CreateArtistState extends State<CreateArtist> {
                   h: 48.h,
                   w: double.infinity,
                   radius: 40,
-                  prefix: WBox(8),
+                  prefix: WBox(10.w),
                   maxLine: 1),
             ],
           ),

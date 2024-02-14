@@ -102,7 +102,10 @@ class _FindFaceState extends State<FindFace> {
                     imagePath: "assets/images/_fpdl 1.png",
                     w: 345.w,
                     h: 500.h),
-              ).then((value) => Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const MainNavPage(),),),);
+              ).then(
+                (value) =>
+                    Navigator.pushReplacementNamed(context, MainNavPage.id),
+              );
             },
             radius: 50),
       ),

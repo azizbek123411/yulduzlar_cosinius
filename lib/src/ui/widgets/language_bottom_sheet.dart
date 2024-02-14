@@ -7,6 +7,7 @@ import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
 
 import '../../repository/utils/app_padding.dart';
+
 class LanguageBottomSheet extends StatefulWidget {
   const LanguageBottomSheet({super.key});
 
@@ -22,40 +23,90 @@ class _LanguageBottomSheetState extends State<LanguageBottomSheet> {
       height: 280.h,
       decoration: BoxDecoration(
         color: AppColors.color2d256b,
-        borderRadius: const BorderRadius.only(topRight: Radius.circular(10),topLeft: Radius.circular(10),),
+        borderRadius: const BorderRadius.only(
+          topRight: Radius.circular(10),
+          topLeft: Radius.circular(10),
+        ),
       ),
       child: Center(
         child: Column(
           children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(50),
+              child: Divider(
+                color: AppColors.colorFFF60,
+                thickness: 6,
+                indent: 150.w,
+                endIndent: 150.w,
+              ),
+            ),
             HBox(10.h),
-            Text("Ilova tili",style: AppTextStyle.instance.w700.copyWith(
-              fontSize: FontSizeConst.instance.extraLargeFont,
-              color: AppColors.colorFFF,
-            ),),
+
+            Text(
+              "Ilova tili",
+              style: AppTextStyle.instance.w700.copyWith(
+                fontSize: FontSizeConst.instance.extraLargeFont,
+                color: AppColors.colorFFF,
+              ),
+            ),
+            const Divider(color: Color(0xff6f3fcd)),
 
             ListTile(
-              leading: IconButton(onPressed: (){},icon: Icon(Icons.radio_button_checked_sharp,color: AppColors.colorFFF),),
-              title: Text("O'zbekcha (UZ)",style: AppTextStyle.instance.w600.copyWith(
-                fontSize: FontSizeConst.instance.mediumFont,
-                color: AppColors.colorFFF,
-              ),),
-              trailing: SvgPicture.asset("assets/svg/uzbekistan-flag-round-circle-icon.svg",height: 32.h,width: 32.w,),
+              leading: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.radio_button_checked_sharp,
+                    color: AppColors.colorFFF),
+              ),
+              title: Text(
+                "O'zbekcha (UZ)",
+                style: AppTextStyle.instance.w600.copyWith(
+                  fontSize: FontSizeConst.instance.mediumFont,
+                  color: AppColors.colorFFF,
+                ),
+              ),
+              trailing: SvgPicture.asset(
+                "assets/svg/uzbekistan-flag-round-circle-icon.svg",
+                height: 32.h,
+                width: 32.w,
+              ),
             ),
             ListTile(
-              leading: IconButton(onPressed: (){},icon: Icon(Icons.radio_button_checked_sharp,color: AppColors.colorFFF,),),
-              title: Text("Русский   (RU)",style: AppTextStyle.instance.w600.copyWith(
-                fontSize: FontSizeConst.instance.mediumFont,
-                color: AppColors.colorFFF,
-              ),),
-              trailing: SvgPicture.asset("assets/svg/russia-flag-round-circle-icon.svg",height: 32.h,width: 32.w),
+              leading: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.radio_button_checked_sharp,
+                  color: AppColors.colorFFF,
+                ),
+              ),
+              title: Text(
+                "Русский   (RU)",
+                style: AppTextStyle.instance.w600.copyWith(
+                  fontSize: FontSizeConst.instance.mediumFont,
+                  color: AppColors.colorFFF,
+                ),
+              ),
+              trailing: SvgPicture.asset(
+                  "assets/svg/russia-flag-round-circle-icon.svg",
+                  height: 32.h,
+                  width: 32.w),
             ),
             ListTile(
-              leading: IconButton(onPressed: (){},icon: Icon(Icons.radio_button_checked_sharp,color: AppColors.colorFFF),),
-              title: Text("English (US)",style: AppTextStyle.instance.w600.copyWith(
-                fontSize: FontSizeConst.instance.mediumFont,
-                color: AppColors.colorFFF,
-              ),),
-              trailing: SvgPicture.asset("assets/svg/usa-flag-round-circle-icon.svg",height: 32.h,width: 32.w),
+              leading: IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.radio_button_checked_sharp,
+                    color: AppColors.colorFFF),
+              ),
+              title: Text(
+                "English (US)",
+                style: AppTextStyle.instance.w600.copyWith(
+                  fontSize: FontSizeConst.instance.mediumFont,
+                  color: AppColors.colorFFF,
+                ),
+              ),
+              trailing: SvgPicture.asset(
+                  "assets/svg/usa-flag-round-circle-icon.svg",
+                  height: 32.h,
+                  width: 32.w),
             ),
           ],
         ),

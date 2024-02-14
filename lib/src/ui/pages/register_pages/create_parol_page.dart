@@ -67,7 +67,6 @@ class _CreateParolState extends State<CreateParol> {
               HBox(160.h),
               Center(
                 child: Column(
-                  // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       alignment: Alignment.center,
@@ -135,7 +134,7 @@ class _CreateParolState extends State<CreateParol> {
                           maxLines: 1,
                           style: AppTextStyle.instance.w500.copyWith(
                               color: AppColors.colorFFF,
-                              fontSize: FontSizeConst.instance.smallFont),
+                              fontSize: FontSizeConst.instance.mediumFont),
                           decoration: InputDecoration(
                             contentPadding: Dis.only(left: 8.w,top: 8.h),
                             suffixIcon: IconButton(onPressed: onTapped, icon:visibility? Icon(
@@ -184,7 +183,7 @@ class _CreateParolState extends State<CreateParol> {
                           maxLines: 1,
                           style: AppTextStyle.instance.w500.copyWith(
                               color: AppColors.colorFFF,
-                              fontSize: FontSizeConst.instance.smallFont),
+                              fontSize: FontSizeConst.instance.mediumFont),
                           decoration: InputDecoration(
                             contentPadding: Dis.only(left: 8.w,top: 8.h),
                             suffixIcon: IconButton(onPressed: onTappedCheck, icon:visibilityCheck? Icon(
@@ -206,29 +205,26 @@ class _CreateParolState extends State<CreateParol> {
                     ],
                   ),
                 ],
+              ),
+              Container(
+                  margin: Dis.only(top: 200.h),
+                  height: 50.h,
+                  width: double.infinity,
+                  child:  MainButton(
+                      height: 48.h,
+                      width: double.infinity,
+                      title: "Davom etish",
+                      onTap: () {
+                        AppRouter.go(context, const UserOrArtist());
+                      },
+                      radius: 50)
+
               )
             ],
           ),
         ),
       ),
-      floatingActionButton: Padding(
-        padding: Dis.only(lr: 16.w, bottom: 15.h),
-        child: Container(
-          margin: Dis.only(top: 260.h),
-          height: 50.h,
-          width: double.infinity,
-          child:  MainButton(
-                  height: 48.h,
-                  width: double.infinity,
-                  title: "Davom etish",
-                  onTap: () {
-                    AppRouter.go(context, const UserOrArtist());
-                  },
-                  radius: 50)
 
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

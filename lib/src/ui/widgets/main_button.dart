@@ -28,6 +28,13 @@ class MainButton extends StatelessWidget {
         height: height,
         width: width,
         decoration: BoxDecoration(
+
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.colorC042D7.withOpacity(0.4),
+              blurRadius: 40.0,spreadRadius: 15
+            )
+          ],
           borderRadius: BorderRadius.circular(radius),
           gradient: AppColors.mainButtonGradient,
           border: Border.all(color: AppColors.colorC042D7, width: 1),

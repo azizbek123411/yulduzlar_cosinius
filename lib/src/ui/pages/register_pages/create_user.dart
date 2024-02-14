@@ -71,7 +71,7 @@ class _CreateUserState extends State<CreateUser> {
                   h: 48.h,
                   w: double.infinity,
                   radius: 40,
-                  prefix: WBox(8),
+                  prefix: WBox(10.w),
                   maxLine: 1),
               TextFields(
                   title: "Familiya",
@@ -81,7 +81,7 @@ class _CreateUserState extends State<CreateUser> {
                   h: 48.h,
                   w: double.infinity,
                   radius: 40,
-                  prefix: WBox(8),
+                  prefix: WBox(10.w),
                   maxLine: 1),
             ],
           ),
@@ -107,11 +107,9 @@ class _CreateUserState extends State<CreateUser> {
                     w: 345.w,
                     h: 500.h),
               ).then(
-                (value) => Navigator.pushReplacement(
+                (value) => Navigator.pushReplacementNamed(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const MainNavPage(),
-                  ),
+                MainNavPage.id
                 ),
               );
             },

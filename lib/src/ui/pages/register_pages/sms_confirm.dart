@@ -125,49 +125,46 @@ class _SMSConfirmState extends State<SMSConfirm> {
                   Text("12 soniyadan keyin qayta yuboring",style: AppTextStyle.instance.w600.copyWith(
                     fontSize: FontSizeConst.instance.smallFont,
                     color: AppColors.colorFFF60
-                  ),)
+                  ),),
+                  Container(
+                    margin: Dis.only(top: 274.h),
+                    height: 50.h,
+                    width: double.infinity,
+                    child: showButton
+                        ? MainButton(
+                        height: 48.h,
+                        width: double.infinity,
+                        title: "Davom etish",
+                        onTap: () {
+                          AppRouter.go(context, const CreateParol());
+                        },
+                        radius: 50)
+                        : Container(
+                      height: 48.h,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        gradient: AppColors.mainBackgroundGradient,
+                        border:
+                        Border.all(color: showButton?AppColors.colorC042D7:AppColors.color2d256b, width: 1),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Davom etish",
+                          style: AppTextStyle.instance.w600.copyWith(
+                              fontSize: FontSizeConst.instance.mediumFont,
+                              color: AppColors.colorFFF),
+                        ),
+                      ),
+                    ),
+                  )
                 ],
               )
             ],
           ),
         ),
       ),
-      floatingActionButton:   Padding(
-        padding: Dis.only(lr: 16.w,bottom: 15.h),
-        child: Container(
-          margin: Dis.only(top: 260.h),
-          height: 50.h,
-          width: double.infinity,
-          child: showButton
-              ? MainButton(
-              height: 48.h,
-              width: double.infinity,
-              title: "Davom etish",
-              onTap: () {
-                 AppRouter.go(context, const CreateParol());
-              },
-              radius: 50)
-              : Container(
-            height: 48.h,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              gradient: AppColors.mainBackgroundGradient,
-              border:
-              Border.all(color: showButton?AppColors.colorC042D7:AppColors.color2d256b, width: 1),
-            ),
-            child: Center(
-              child: Text(
-                "Davom etish",
-                style: AppTextStyle.instance.w600.copyWith(
-                    fontSize: FontSizeConst.instance.mediumFont,
-                    color: AppColors.colorFFF),
-              ),
-            ),
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+
     );
   }
 }

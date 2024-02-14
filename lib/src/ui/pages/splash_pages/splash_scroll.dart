@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/app_padding.dart';
 import 'package:yulduzlar_cosinius/src/repository/utils/creen_utils.dart';
+import 'package:yulduzlar_cosinius/src/repository/utils/space.dart';
 import 'package:yulduzlar_cosinius/src/ui/screens/splash_screens/splash_roll_screen.dart';
 import 'package:yulduzlar_cosinius/src/ui/widgets/main_button.dart';
 
@@ -30,7 +31,7 @@ class _SplashScrollState extends State<SplashScroll> {
     return Scaffold(
       backgroundColor: AppColors.mainBackground,
       body: Padding(
-        padding: Dis.only(lr: 18.w, top: 30.h, bottom: 15.h),
+        padding: Dis.only(lr: 18.w, top: 50.h, bottom: 15.h),
         child: SizedBox(
           height: double.infinity,
           width: double.infinity,
@@ -38,6 +39,7 @@ class _SplashScrollState extends State<SplashScroll> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              // HBox(10.h),
               SmoothPageIndicator(
                 controller: controller,
                 count: 3,
@@ -59,7 +61,7 @@ class _SplashScrollState extends State<SplashScroll> {
                     // print(index);
                   },
                   controller: controller,
-                  children: [
+                  children: const [
                     SplashRollScreen(),
                     SplashRollScreen(),
                     SplashRollScreen(),
@@ -69,17 +71,32 @@ class _SplashScrollState extends State<SplashScroll> {
               SizedBox(
                 height: 55.h,
                 width: double.infinity,
-                child: MainButton(height: 48.h, width: double.infinity, title: "Keyingisi", onTap: (){
-                  setState(() {
-                    if(currentIndex==0){
-                      controller.jumpToPage(1);
-                    }else if(currentIndex==1){
-                      controller.jumpToPage(2);
-                    }else if(currentIndex==2){
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (BuildContext context)=>const EnterNumberPage(),),);
-                    }
-                  });
-                }, radius: 50),
+                child: MainButton(
+                    height: 48.h,
+                    width: double.infinity,
+                    title: "Keyingisi",
+                    onTap: () {
+                      setState(() {
+                        if (currentIndex == 0) {
+                          controller.animateToPage(1,
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.easeIn);
+                        } else if (currentIndex == 1) {
+                          controller.animateToPage(2,
+                              duration: const Duration(milliseconds: 300),
+                              curve: Curves.easeIn);
+                        } else if (currentIndex == 2) {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const EnterNumberPage(),
+                            ),
+                          );
+                        }
+                      });
+                    },
+                    radius: 50),
               )
             ],
           ),

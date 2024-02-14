@@ -11,6 +11,7 @@ import '../../../repository/utils/app_padding.dart';
 import 'home_page.dart';
 
 class MainNavPage extends StatefulWidget {
+  static const String id='mainnav';
   const MainNavPage({super.key});
 
   @override
